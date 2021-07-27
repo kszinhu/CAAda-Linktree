@@ -199,9 +199,9 @@
       -ms-flex-align: center;
       align-items: center;
       -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
       --tw-bg-opacity: 0.05;
       background-color: rgba(20, 20, 20, var(--tw-bg-opacity));
       padding-left: 1rem;
@@ -343,12 +343,23 @@
           <span class="text-xs">- Confere os links aê -</span>
           <div class="cardLinks">
 
-            <a id="Certificados" onclick="createList(document.querySelector('#Certificados'))" style="cursor: pointer;">
+            <a id="Certificados" onclick="createList(document.querySelector('#Certificados'), getItems(1))"
+              style="cursor: pointer;">
               <div class="cardLink_Icon"><img alt="Páginas" width="36px" height="36px"
                   src="./assets/social/icons8-diploma-1-96.png" /></div>
               <div class="cardLink_Text">
                 <h2>Certificados de Eventos</h2>
                 <span>Faça download dos certificados 📚</span>
+              </div>
+            </a>
+
+            <a id="Workshop" onclick="createList(document.querySelector('#Workshop'), getItems(2))"
+              style="cursor: pointer;">
+              <div class="cardLink_Icon"><img alt="Páginas" width="36px" height="36px"
+                  src="./assets/social/caixa-de-ferramentas.svg" /></div>
+              <div class="cardLink_Text">
+                <h2>Workshop Let's Code</h2>
+                <span>Participe do Workshop! 👨‍💻</span>
               </div>
             </a>
 
