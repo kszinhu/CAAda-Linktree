@@ -341,89 +341,83 @@
 
         <div class="cardContent">
           <span class="text-xs">- Confere os links aê -</span>
-          <div class="cardLinks">
+          <div id='card-links-container' style='width: 100%'>
+            <section id='card-links-unfixed' class='cardLinks'>
 
-            <!-- <a id="Certificados" onclick="createList(document.querySelector('#Certificados'), getItems(1))"
-              style="cursor: pointer;">
-              <div class="cardLink_Icon"><img alt="Páginas" width="36px" height="36px"
-                  src="./assets/social/icons8-diploma-1-96.png" /></div>
-              <div class="cardLink_Text">
-                <h2>Certificados de Eventos</h2>
-                <span>Faça download dos certificados 📚</span>
-              </div>
-            </a> -->
+              <!-- <a id="Certificados" onclick="createList(document.querySelector('#Certificados'), getItems(1))"
+                style="cursor: pointer;">
+                <div class="cardLink_Icon"><img alt="Páginas" width="36px" height="36px"
+                    src="./assets/social/icons8-diploma-1-96.png" /></div>
+                <div class="cardLink_Text">
+                  <h2>Certificados de Eventos</h2>
+                  <span>Faça download dos certificados 📚</span>
+                </div>
+              </a> -->
 
-            <!-- <a id="Workshop" onclick="createList(document.querySelector('#Workshop'), getItems(2))"
-              style="cursor: pointer;">
-              <div class="cardLink_Icon"><img alt="Páginas" width="36px" height="36px"
-                  src="./assets/social/caixa-de-ferramentas.svg" /></div>
-              <div class="cardLink_Text">
-                <h2>Workshop Let's Code</h2>
-                <span>Participe do Workshop! 👨‍💻👩🏽‍💻</span>
-              </div>
-            </a> -->
+              <!-- <a id="Workshop" onclick="createList(document.querySelector('#Workshop'), getItems(2))"
+                style="cursor: pointer;">
+                <div class="cardLink_Icon"><img alt="Páginas" width="36px" height="36px"
+                    src="./assets/social/caixa-de-ferramentas.svg" /></div>
+                <div class="cardLink_Text">
+                  <h2>Workshop Let's Code</h2>
+                  <span>Participe do Workshop! 👨‍💻👩🏽‍💻</span>
+                </div>
+              </a> -->
 
-            <a href="https://forms.gle/6Lw4hzMNXV4fKcb87">
-              <div class="cardLink_Icon"><img alt="Páginas" width="36px" height="36px" src="assets/social/paper.svg" />
-              </div>
-              <div class="cardLink_Text">
-                <h2>Representante no Conselho do Departamento</h2>
-                <span>Participe e faça parte do Conselho do Departamento!😊</span>
-              </div>
-            </a>
+            </section>
+            <section id='card-links-fixed' class='cardLinks' style='margin-top: 32px'>
+              <!-----FIXADOS----->
+              <!-- REGIMENTO -->
+              <a href="https://drive.google.com/file/d/1ik0UyRFsZZOlLrG03pz35Dw3TtA62nGO/view?usp=sharing">
+                <div class="cardLink_Icon"><img alt="Livro" width="36px" height="36px" src="assets/social/book.svg" />
+                </div>
+                <div class="cardLink_Text">
+                  <h2>Regimento</h2>
+                  <span>Veja o Regimento do Centro Acadêmico 😁</span>
+                </div>
+              </a>
 
-            <a href="https://drive.google.com/file/d/1tVL8LVXsfOQjZrYiolIgb18gNR5tJ3Q5/view?usp=sharing">
-              <div class="cardLink_Icon"><img alt="Páginas" width="36px" height="36px" src="assets/social/paper.svg" />
-              </div>
-              <div class="cardLink_Text">
-                <h2>Carta Programa</h2>
-                <span>Veja a Carta da Chapa <i>"Frances Allen"</i> 😀</span>
-              </div>
-            </a>
+              <!-- ATA -->
+              <a href="https://drive.google.com/drive/folders/0ByRQyNFmNpy4WEY1bUlIZVp3c0U?usp=sharing">
+                <div class="cardLink_Icon"><img alt="Pilha de Pápeis" width="36px" height="36px"
+                    src="assets/social/stack_paper.svg" />
+                </div>
+                <div class="cardLink_Text">
+                  <h2>ATA's</h2>
+                  <span>Confira as ATAs das reuniões 🤔</span>
+                </div>
+              </a>
 
-            <a href="https://drive.google.com/file/d/1ik0UyRFsZZOlLrG03pz35Dw3TtA62nGO/view?usp=sharing">
-              <div class="cardLink_Icon"><img alt="Livro" width="36px" height="36px" src="assets/social/book.svg" />
-              </div>
-              <div class="cardLink_Text">
-                <h2>Regimento</h2>
-                <span>Veja o Regimento do Centro Acadêmico 😁</span>
-              </div>
-            </a>
+              <!-- INSTAGRAM -->
+              <a href="https://www.instagram.com/caadaunesp/">
+                <div class="cardLink_Icon"><img alt="Instagram" width="36px" height="36px"
+                    src="assets/social/instagram.svg" /></div>
+                <div class="cardLink_Text">
+                  <h2>Siga-nos no Instagram!</h2>
+                  <span>Perfil do CAAda 💙👨‍💻👩‍💻</span>
+                </div>
+              </a>
 
-            <a href="https://drive.google.com/drive/folders/0ByRQyNFmNpy4WEY1bUlIZVp3c0U?usp=sharing">
-              <div class="cardLink_Icon"><img alt="Pilha de Pápeis" width="36px" height="36px"
-                  src="assets/social/stack_paper.svg" />
-              </div>
-              <div class="cardLink_Text">
-                <h2>ATA's</h2>
-                <span>Confira as ATAs das reuniões 🤔</span>
-              </div>
-            </a>
-
-            <a href="https://www.instagram.com/caadaunesp/">
-              <div class="cardLink_Icon"><img alt="Instagram" width="36px" height="36px"
-                  src="assets/social/instagram.svg" /></div>
-              <div class="cardLink_Text">
-                <h2>Siga-nos no Instagram!</h2>
-                <span>Perfil do CAAda 💙👨‍💻👩‍💻</span>
-              </div>
-            </a>
-
-            <a href="https://www.facebook.com/caadaunesp/">
-              <div class="cardLink_Icon"><img alt="Facebook" width="36px" height="36px"
-                  src="assets/social/facebook.svg" /></div>
-              <div class="cardLink_Text">
-                <h2>Curta a gente no Facebook!</h2>
-                <span>Página do CAAda 💙👨‍💻👩‍💻</span>
-              </div>
-            </a>
-
+              <!-- FACEBOOK -->
+              <a href="https://www.facebook.com/caadaunesp/">
+                <div class="cardLink_Icon"><img alt="Facebook" width="36px" height="36px"
+                    src="assets/social/facebook.svg" /></div>
+                <div class="cardLink_Text">
+                  <h2>Curta a gente no Facebook!</h2>
+                  <span>Página do CAAda 💙👨‍💻👩‍💻</span>
+                </div>
+              </a>
+            </section>
           </div>
         </div>
       </div>
     </div>
   </div>
   <script src="./assets/js/main.js"></script>
+  <script>
+    // Function to render page links
+    renderItems();
+  </script>
 </body>
 
 </html>
