@@ -1,0 +1,23 @@
+{
+  "name": "caada-linktree",
+  "version": "1.0.0",
+  "description": "Linktree do Centro Acadêmico Ada Lovelace",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -w ./src/scss -o ./src/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CA-Ada/CAAda-Linktree.git"
+  },
+  "author": "kszinhu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CA-Ada/CAAda-Linktree/issues"
+  },
+  "homepage": "https://github.com/CA-Ada/CAAda-Linktree#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
