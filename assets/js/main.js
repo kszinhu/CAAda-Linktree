@@ -33,7 +33,7 @@ const items = [
   {
     type: "single",
     title: "O que são atividades complementares?",
-    description: `<span>
+    description: `<span style="margin-left: 1px">
       Saiba mais sobre o que são atividades complementares, participando da <strong>Mesa Redonda</strong>.
     </span>`,
     link: "https://forms.gle/z6e1YZaMFWKrHSC2A",
