@@ -32,6 +32,16 @@ const icons = {
 const items = [
   {
     type: "single",
+    title: "O que são atividades complementares?",
+    description: `<span>
+      Saiba mais sobre o que são atividades complementares, participando da <strong>Mesa Redonda</strong>.
+    </span>`,
+    link: "https://forms.gle/z6e1YZaMFWKrHSC2A",
+    icon: icons.form,
+    date: StringToDate("21/01/2022"),
+  },
+  {
+    type: "single",
     title: "Representante no Conselho do Departamento",
     description: "Participe e faça parte do Conselho do Departamento!😊",
     link: "https://forms.gle/6Lw4hzMNXV4fKcb87",
