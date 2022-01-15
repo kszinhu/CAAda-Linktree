@@ -136,10 +136,6 @@
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         -webkit-transition-duration: 300ms;
         transition-duration: 300ms; }
-        .context .cardContent .cardLinks a:hover > ul > a:hover {
-          --tw-text-opacity: 1;
-          --tw-bg-opacity: 1 !important;
-          color: rgba(43, 43, 43, var(--tw-text-opacity)); }
         .context .cardContent .cardLinks a.disabled {
           opacity: 0.5; }
           .context .cardContent .cardLinks a.disabled:hover {
@@ -193,14 +189,6 @@
   .dark .cardPages .cardContent .cardLinks a {
     --tw-bg-opacity: 0.05;
     background-color: rgba(235, 235, 235, var(--tw-bg-opacity)); }
-    .dark .cardPages .cardContent .cardLinks a:hover:has(> ul) {
-      --tw-text-opacity: 1;
-      --tw-bg-opacity: 1 !important;
-      color: rgba(43, 43, 43, var(--tw-text-opacity)); }
-    .dark .cardPages .cardContent .cardLinks a:hover > ul > a:hover {
-      --tw-text-opacity: 1;
-      --tw-bg-opacity: 1 !important;
-      color: rgba(43, 43, 43, var(--tw-text-opacity)); }
     .dark .cardPages .cardContent .cardLinks a a.disabled:hover {
       --tw-bg-opacity: 0.05;
       background-color: rgba(235, 235, 235, var(--tw-bg-opacity));

@@ -154,14 +154,6 @@
         -webkit-transition-duration: 300ms;
         transition-duration: 300ms;
 
-        &:hover {
-          & > ul > a:hover {
-            --tw-text-opacity: 1;
-            --tw-bg-opacity: 1 !important;
-            color: rgba(43, 43, 43, var(--tw-text-opacity));
-          }
-        }
-
         &.disabled {
           opacity: 0.5;
 
@@ -240,20 +232,6 @@
         & a {
           --tw-bg-opacity: 0.05;
           background-color: rgba(235, 235, 235, var(--tw-bg-opacity));
-
-          &:hover {
-            &:has(> ul) {
-              --tw-text-opacity: 1;
-              --tw-bg-opacity: 1 !important;
-              color: rgba(43, 43, 43, var(--tw-text-opacity));
-            }
-
-            & > ul > a:hover {
-              --tw-text-opacity: 1;
-              --tw-bg-opacity: 1 !important;
-              color: rgba(43, 43, 43, var(--tw-text-opacity));
-            }
-          }
 
           a.disabled:hover {
             --tw-bg-opacity: 0.05;
