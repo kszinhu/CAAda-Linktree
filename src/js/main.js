@@ -31,6 +31,27 @@ const icons = {
  */
 const items = [
   {
+    type: "multiple",
+    title: "Fer foda",
+    description: "Fer foda",
+    link: [
+      {
+        title: "Fer foda",
+        description: "Fer foda",
+        icon: icons.paper,
+        link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      },
+      {
+        title: "Fer foda 2",
+        description: "Fer foda 2",
+        icon: icons.paper,
+        link: "https://www.google.com/",
+      },
+    ],
+    icon: icons.stack_paper,
+    date: StringToDate("01/02/2022"),
+  },
+  {
     type: "single",
     title: "O que são atividades complementares?",
     description: `<span style="margin-left: 1px">
@@ -62,9 +83,16 @@ const getItems = (index) => items[index].link;
 const createList = (local, items) => {
   const listitems = [];
   for (let i = 0; i < items.length; i++) {
-    listitems.push(`<li style="margin: 1em">${items[i]}</li>`);
+    const item = createItem(items[i]);
+    debugger
+    listitems.push(item);
+    // listitems.push(`<li style="margin: 1em">${item}</li>`);
   }
-  local.outerHTML = `<ul>${listitems.join("")}</ul>`;
+  const list = document.createElement("ul");
+  list.style = "margin: 1em; width: 100%";
+  list.innerHTML = listitems.map((item) => item.outerHTML).join("");
+  local.innerHTML = list.outerHTML;
+  // local.outerHTML = `<ul>${listitems.join("")}</ul>`;
 };
 
 /**
@@ -100,6 +128,21 @@ function isHTML(str) {
   return Array.from(doc.body.childNodes).some((node) => node.nodeType === 1);
 }
 
+function createItem({ title, description, icon, link }) {
+  const item = document.createElement("a");
+  item.target = "_blank";
+  item.href = link;
+  item.innerHTML = `
+    <div class="cardLink_Icon">
+      <img src="${icon}" alt="${title}" width='36px' height='36px'>
+    </div>
+    <div class='cardLink_Text'>
+      ${isHTML(title) ? title : `<h2>${title}</h2>`}
+      ${isHTML(description) ? description : `<span>${description}</span>`}
+    </div>`;
+  return item;
+}
+
 /**
  * Renders cards that are not fixed
  */
@@ -132,11 +175,10 @@ const renderItems = () => {
             </div>`;
       },
       multiple: () => {
-        item.id = isHTML(title) ? title : title.replace(/\s/g, "");
-        item.onclick = createList(
-          document.querySelector(`#${title}`),
-          getitems(index)
-        );
+        item.id = title.replace(/\s/g, "");
+        item.onclick = () => {
+          createList(item, getItems(index));
+        };
         item.style.cursor = "pointer";
         item.innerHTML = `
             <div class='cardLink_Icon'>

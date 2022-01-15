@@ -192,7 +192,11 @@
   .dark .cardPages .cardContent .cardLinks a {
     --tw-bg-opacity: 0.05;
     background-color: rgba(235, 235, 235, var(--tw-bg-opacity)); }
-    .dark .cardPages .cardContent .cardLinks a:hover {
+    .dark .cardPages .cardContent .cardLinks a > ul > a:hover {
+      --tw-text-opacity: 1;
+      --tw-bg-opacity: 1;
+      color: rgba(43, 43, 43, var(--tw-text-opacity)); }
+    .dark .cardPages .cardContent .cardLinks a:first-child ~ :not(ul):hover {
       --tw-text-opacity: 1;
       --tw-bg-opacity: 1;
       color: rgba(43, 43, 43, var(--tw-text-opacity)); }
@@ -203,6 +207,8 @@
       color: rgba(255, 255, 255, var(--tw-text-opacity)); }
     .dark .cardPages .cardContent .cardLinks a .cardLink_Text span {
       opacity: 0.75; }
+    .dark .cardPages .cardContent .cardLinks a ul > a:not(:last-child) {
+      margin-bottom: 0.5rem; }
 
 .dark .cardPages .card___content .cardLinks a.disabled:hover {
   --tw-bg-opacity: 0.05;

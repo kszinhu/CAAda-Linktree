@@ -238,11 +238,20 @@
           --tw-bg-opacity: 0.05;
           background-color: rgba(235, 235, 235, var(--tw-bg-opacity));
 
-          &:hover {
-            --tw-text-opacity: 1;
-            --tw-bg-opacity: 1;
-            color: rgba(43, 43, 43, var(--tw-text-opacity));
-            // background-color: rgba(235, 235, 235, var(--tw-bg-opacity));
+          & > ul > a {
+            &:hover {
+              --tw-text-opacity: 1;
+              --tw-bg-opacity: 1;
+              color: rgba(43, 43, 43, var(--tw-text-opacity));
+            }
+          }
+
+          &:first-child ~ :not(ul) {
+            &:hover {
+              --tw-text-opacity: 1;
+              --tw-bg-opacity: 1;
+              color: rgba(43, 43, 43, var(--tw-text-opacity));
+            }
           }
 
           a.disabled:hover {
@@ -254,6 +263,10 @@
 
           & .cardLink_Text span {
             opacity: 0.75;
+          }
+
+          & ul > a:not(:last-child) {
+            margin-bottom: 0.5rem;
           }
         }
       }
