@@ -84,13 +84,14 @@ const createList = (local, items) => {
   const listitems = [];
   for (let i = 0; i < items.length; i++) {
     const item = createItem(items[i]);
-    debugger
     listitems.push(item);
     // listitems.push(`<li style="margin: 1em">${item}</li>`);
   }
   const list = document.createElement("ul");
   list.style = "margin: 1em; width: 100%";
   list.innerHTML = listitems.map((item) => item.outerHTML).join("");
+  local.classList.remove("hoverable");
+  local.style = "";
   local.innerHTML = list.outerHTML;
   // local.outerHTML = `<ul>${listitems.join("")}</ul>`;
 };
@@ -130,6 +131,7 @@ function isHTML(str) {
 
 function createItem({ title, description, icon, link }) {
   const item = document.createElement("a");
+  item.classList.add("hoverable");
   item.target = "_blank";
   item.href = link;
   item.innerHTML = `
@@ -155,6 +157,7 @@ const renderItems = () => {
     const item = document.createElement("a");
     const handleItem = {
       single: () => {
+        item.classList.add("hoverable");
         item.href = link;
         item.innerHTML = `
             <div class='cardLink_Icon'>
@@ -176,6 +179,7 @@ const renderItems = () => {
       },
       multiple: () => {
         item.id = title.replace(/\s/g, "");
+        item.classList.add("hoverable");
         item.onclick = () => {
           createList(item, getItems(index));
         };
