@@ -13,8 +13,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build the css
-    - run: npm run scss
+
+    - name: Build css
+      run: |
+        npm install
+        npm run scss
     - uses: actions/checkout@v2
     - name: Build the site in the jekyll/builder container
       run: |
