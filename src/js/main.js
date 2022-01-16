@@ -31,27 +31,6 @@ const icons = {
  */
 const items = [
   {
-    type: "multiple",
-    title: "Fer foda",
-    description: "Fer foda",
-    link: [
-      {
-        title: "Fer foda",
-        description: "Fer foda",
-        icon: icons.paper,
-        link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      },
-      {
-        title: "Fer foda 2",
-        description: "Fer foda 2",
-        icon: icons.paper,
-        link: "https://www.google.com/",
-      },
-    ],
-    icon: icons.stack_paper,
-    date: StringToDate("01/02/2022"),
-  },
-  {
     type: "single",
     title: "O que são atividades complementares?",
     description: `<span style="margin-left: 1px">
@@ -81,16 +60,12 @@ const items = [
 const getItems = (index) => items[index].link;
 
 const createList = (local, items) => {
-  const listitems = [];
-  for (let i = 0; i < items.length; i++) {
-    const item = createItem(items[i]);
-    listitems.push(item);
-  }
+  local.classList.remove("hoverable");
+  local.style = "";
+  const listitems = Array.from(items).map((item) => createItem(item));
   const list = document.createElement("ul");
   list.style = "margin: 1em; width: 100%";
   list.innerHTML = listitems.map((item) => item.outerHTML).join("");
-  local.classList.remove("hoverable");
-  local.style = "";
   local.innerHTML = list.outerHTML;
 };
 
