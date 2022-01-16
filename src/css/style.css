@@ -1,0 +1,252 @@
+:root {
+  --scrollbar-thumb: #2B2B2B;
+  --scrollbar-thumb-hover: #3a3a3a;
+  --scrollbar-thumb-active: #3a3a3a;
+  --scrollbar-track: transparent;
+  background-color: #141414; }
+
+.context {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  --tw-bg-opacity: 1;
+  background-color: rgba(250, 250, 250, var(--tw-bg-opacity));
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 2rem;
+  border-radius: 2rem;
+  padding: 2rem;
+  padding-bottom: 3.5rem;
+  -webkit-transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, -webkit-transform;
+  -webkit-transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 400ms;
+  transition-duration: 400ms;
+  max-width: 534px; }
+  .context > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(2rem * var(--tw-space-y-reverse)); }
+  .context .cardHeader {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 0px !important; }
+    .context .cardHeader > :not([hidden]) ~ :not([hidden]) {
+      --tw-space-y-reverse: 0;
+      margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+      margin-bottom: calc(2rem * var(--tw-space-y-reverse)); }
+  .context .cardHeaderImage {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 9999px;
+    border-width: 2px;
+    --tw-border-opacity: 1;
+    border-color: rgba(255, 255, 255, var(--tw-border-opacity));
+    width: 156px;
+    height: 156px; }
+  .context .cardContent {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    width: 100%; }
+    .context .cardContent .cardLinks {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1; }
+      .context .cardContent .cardLinks a {
+        position: relative;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-flex: 1;
+        -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        --tw-bg-opacity: 0.05;
+        background-color: rgba(20, 20, 20, var(--tw-bg-opacity));
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-radius: 0.5rem;
+        -webkit-transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, -webkit-transform;
+        -webkit-transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+        transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+        -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        -webkit-transition-duration: 300ms;
+        transition-duration: 300ms; }
+        .context .cardContent .cardLinks a.disabled {
+          opacity: 0.5; }
+          .context .cardContent .cardLinks a.disabled:hover {
+            --tw-bg-opacity: 0.05;
+            background-color: rgba(20, 20, 20, var(--tw-bg-opacity)); }
+        .context .cardContent .cardLinks a > :not([hidden]) ~ :not([hidden]) {
+          --tw-space-x-reverse: 0;
+          margin-right: calc(1rem * var(--tw-space-x-reverse));
+          margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse))); }
+        .context .cardContent .cardLinks a .cardLink_Icon {
+          width: 36px; }
+        .context .cardContent .cardLinks a .cardLink_Text {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-flex: 1;
+          -webkit-flex-grow: 1;
+          -ms-flex-positive: 1;
+          flex-grow: 1;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-align-items: flex-start;
+          -webkit-box-align: flex-start;
+          -ms-flex-align: flex-start;
+          align-items: flex-start;
+          text-align: left; }
+        .context .cardContent .cardLinks a h2 {
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+          font-weight: 500; }
+        .context .cardContent .cardLinks a span {
+          font-size: 0.75rem;
+          line-height: 1rem;
+          opacity: 0.6; }
+      .context .cardContent .cardLinks > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(2rem * var(--tw-space-y-reverse)); }
+    .context .cardContent > :not([hidden]) ~ :not([hidden]) {
+      --tw-space-y-reverse: 0;
+      margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+      margin-bottom: calc(0.75rem * var(--tw-space-y-reverse)); }
+
+.dark .cardPages {
+  --tw-bg-opacity: 1;
+  background-color: rgba(43, 43, 43, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity)); }
+  .dark .cardPages .cardContent .cardLinks a {
+    --tw-bg-opacity: 0.05;
+    background-color: rgba(235, 235, 235, var(--tw-bg-opacity)); }
+    .dark .cardPages .cardContent .cardLinks a a.disabled:hover {
+      --tw-bg-opacity: 0.05;
+      background-color: rgba(235, 235, 235, var(--tw-bg-opacity));
+      --tw-text-opacity: 1;
+      color: rgba(255, 255, 255, var(--tw-text-opacity)); }
+    .dark .cardPages .cardContent .cardLinks a .cardLink_Text span {
+      opacity: 0.75; }
+    .dark .cardPages .cardContent .cardLinks a ul > a:not(:last-child) {
+      margin-bottom: 0.5rem; }
+
+.dark .cardPages .card___content .cardLinks a.disabled:hover {
+  --tw-bg-opacity: 0.05;
+  background-color: rgba(235, 235, 235, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity)); }
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 0.5rem; }
+
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0; }
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 4px;
+  border: none; }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-thumb-hover); }
+  ::-webkit-scrollbar-thumb:active {
+    background-color: var(--scrollbar-thumb-active); }
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border: none; }
+
+::-webkit-scrollbar-corner {
+  background: transparent; }
+
+.hoverable:hover {
+  --tw-text-opacity: 1 !important;
+  --tw-bg-opacity: 1 !important;
+  color: rgba(43, 43, 43, var(--tw-text-opacity)); }
+
+@media (min-width: 640px) {
+  .context .cardContent .cardLinks a .cardLink_Icon {
+    position: absolute; }
+  .context .cardContent .cardLinks a .cardLink_Text {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center; } }
