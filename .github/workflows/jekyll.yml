@@ -1,26 +1,24 @@
-name: Jekyll site CI
+name: Build and deploy Jekyll site to GitHub Pages
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main, deploy ]
   pull_request:
     branches: [ deploy ]
 
 jobs:
-  build:
-
+  github-pages:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Build css
-      run: |
-        npm install
-        npm run scss
-    - uses: actions/checkout@v2
-    - name: Build the site in the jekyll/builder container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+      - name: Build css
+        run: |
+          npm install
+          npm run scss
+
+      - uses: helaili/jekyll-action@2.1.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          NODE_ENV: "production"
