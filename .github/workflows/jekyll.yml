@@ -17,8 +17,7 @@ jobs:
           npm install
           npm run build
 
-      - uses: helaili/jekyll-action@2.1.0
+      - uses: helaili/jekyll-action@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-        env:
-          NODE_ENV: "production"
+          target_branch: 'main'
