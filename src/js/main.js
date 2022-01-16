@@ -85,7 +85,6 @@ const createList = (local, items) => {
   for (let i = 0; i < items.length; i++) {
     const item = createItem(items[i]);
     listitems.push(item);
-    // listitems.push(`<li style="margin: 1em">${item}</li>`);
   }
   const list = document.createElement("ul");
   list.style = "margin: 1em; width: 100%";
@@ -93,7 +92,6 @@ const createList = (local, items) => {
   local.classList.remove("hoverable");
   local.style = "";
   local.innerHTML = list.outerHTML;
-  // local.outerHTML = `<ul>${listitems.join("")}</ul>`;
 };
 
 /**
