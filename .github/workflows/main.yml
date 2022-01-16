@@ -23,4 +23,4 @@ jobs:
           # root directory of the site is the current directory
           build_dir: .
         env:
-          GIHUB_TOKEN: ${{ secrets.ORGANIZATION_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_REPO_TOKEN }}
