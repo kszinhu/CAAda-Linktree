@@ -22,3 +22,5 @@ jobs:
           target_branch: gh-pages
           # root directory of the site is the current directory
           build_dir: .
+        env:
+          GIHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
