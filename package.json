@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass -w ./src/scss -o ./src/css"
+    "scss": "node-sass -w ./src/scss -o ./src/css",
+    "build:css": "node-sass ./src/scss -o ./src/css/",
+    "build": "npm run scss && npm run build:js && npm run build:css"
   },
   "repository": {
     "type": "git",
