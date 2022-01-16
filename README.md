@@ -38,7 +38,7 @@ $ cd CAAda-Linktree
 
 2. Ou entrar no link em que essa aplicação esta sendo hospedada(**GithubPages**):
 
-[Linktree](https://kszinhu.github.io/CAAda-Linktree/)
+[Linktree](https://ca-ada.github.io/caada-linktree/)
 
 ---
 
