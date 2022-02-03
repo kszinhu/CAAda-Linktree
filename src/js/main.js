@@ -40,6 +40,13 @@ const items = [
   },
   {
     type: "single",
+    title: "Certificado - Mesa Redonda",
+    description: "Adquira o certificado da mesa redonda: O que são atividades complementares?.🤓",
+    link: "encurtador.com.br/ehsA8",
+    icon: icons.certificate,
+  },
+  {
+    type: "single",
     title: "Carta Programa",
     description: '<span>Veja a Carta da Chapa <i>"Frances Allen"</i> 😀</span>',
     link: "https://drive.google.com/file/d/1tVL8LVXsfOQjZrYiolIgb18gNR5tJ3Q5/view?usp=sharing",
