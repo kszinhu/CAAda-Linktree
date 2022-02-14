@@ -32,6 +32,13 @@ const icons = {
 const items = [
   {
     type: "single",
+    title: "Processo de entrada FAAC WebTV",
+    description: "Preencha e faça parte do FAAC WebTV. 🥳",
+    link: "https://docs.google.com/forms/d/1OM-4keQZYtfnGn5WN3_wr6lWZ3dGh2Bzmo0YXiYbGL8/viewform?edit_requested=true",
+    icon: icons.form,
+  },
+  {
+    type: "single",
     title: "Edital para Eleição da Coordenadoria Executiva",
     description: "Leia o edital e faça sua inscrição.🎉",
     link: "https://drive.google.com/file/d/1Z-3OGGVf9oSKbdyCRhhVvxd-uCSD968A/view?usp=drivesdk",
@@ -41,7 +48,8 @@ const items = [
   {
     type: "single",
     title: "Certificado - Mesa Redonda",
-    description: "Adquira o certificado da mesa redonda: O que são atividades complementares?.🤓",
+    description:
+      "Adquira o certificado da mesa redonda: O que são atividades complementares?.🤓",
     link: "https://drive.google.com/drive/u/7/folders/17fQo23thDpVuN6PgB-Q4xwIokY2it949",
     icon: icons.certificate,
   },
