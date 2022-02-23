@@ -28,8 +28,20 @@ const icons = {
  *
  * - Date {Date}
  * Until which date the card will be displayed
+ * 
+ * - Important {Boolean}
+ * If the card is important appears with a red border
  */
 const items = [
+  {
+    type: "single",
+    title: "Votação para a Coordenadoria Executiva",
+    description: "Vote na nova coordenadoria executiva. 🎉",
+    link: "https://forms.gle/s7Y7tG95Ve7TMXKd6",
+    icon: icons.form,
+    date: StringToDate("26/02/2022"),
+    important: true,
+  },
   {
     type: "single",
     title: "Processo de entrada FAAC WebTV",
@@ -113,11 +125,13 @@ function isHTML(str) {
  * @param {Object} Data
  * @returns {Node} The card
  */
-function createItem({ title, description, icon, link }) {
+function createItem({ title, description, icon, link, important }) {
   const item = document.createElement("a");
   item.id = title.replace(/\s/g, "");
   item.classList.add("hoverable");
   item.target = "_blank";
+  debugger;
+  important && item.classList.add("important-card");
   link && (item.href = link);
   item.innerHTML = `
     <div class="cardLink_Icon">
@@ -136,13 +150,13 @@ function createItem({ title, description, icon, link }) {
 const renderItems = () => {
   const local = document.getElementById("card-links-unfixed");
 
-  items.forEach(({ type, title, description, link, icon, date }, index) => {
+  items.forEach(({ type, title, description, link, icon, date, important }, index) => {
     if (date && isAfter(date)) return;
 
     const handleItem = {
-      single: () => createItem({ title, description, icon, link }),
+      single: () => createItem({ title, description, icon, link, important }),
       multiples: () => {
-        const item = createItem({ title, description, icon });
+        const item = createItem({ title, description, icon, important });
         item.onclick = () => createList(item, getItems(index));
         return item;
       },
