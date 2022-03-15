@@ -35,15 +35,6 @@ const icons = {
 const items = [
   {
     type: "single",
-    title: "Votação para a Coordenadoria Executiva",
-    description: "Vote na nova coordenadoria executiva. 🎉",
-    link: "https://forms.gle/s7Y7tG95Ve7TMXKd6",
-    icon: icons.form,
-    date: StringToDate("26/02/2022"),
-    important: true,
-  },
-  {
-    type: "single",
     title: "Processo de entrada FAAC WebTV",
     description: "Preencha e faça parte do FAAC WebTV. 🥳",
     link: "https://docs.google.com/forms/d/1OM-4keQZYtfnGn5WN3_wr6lWZ3dGh2Bzmo0YXiYbGL8/viewform?edit_requested=true",
@@ -51,25 +42,9 @@ const items = [
   },
   {
     type: "single",
-    title: "Edital para Eleição da Coordenadoria Executiva",
-    description: "Leia o edital e faça sua inscrição.🎉",
-    link: "https://drive.google.com/file/d/1Z-3OGGVf9oSKbdyCRhhVvxd-uCSD968A/view?usp=drivesdk",
-    icon: icons.paper,
-    date: StringToDate("24/02/2022"),
-  },
-  {
-    type: "single",
-    title: "Certificado - Mesa Redonda",
-    description:
-      "Adquira o certificado da mesa redonda: O que são atividades complementares?.🤓",
-    link: "https://drive.google.com/drive/u/7/folders/17fQo23thDpVuN6PgB-Q4xwIokY2it949",
-    icon: icons.certificate,
-  },
-  {
-    type: "single",
     title: "Carta Programa",
-    description: '<span>Veja a Carta da Chapa <i>"Frances Allen"</i> 😀</span>',
-    link: "https://drive.google.com/file/d/1tVL8LVXsfOQjZrYiolIgb18gNR5tJ3Q5/view?usp=sharing",
+    description: '<span>Veja a Carta da Chapa <i>"Larry Tesler"</i> 😀</span>',
+    link: "https://shortest.link/CartaPrograma-LarryTesler",
     icon: icons.paper,
   },
 ];
