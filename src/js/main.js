@@ -5,6 +5,7 @@ const icons = {
   form: "assets/social/formularios-do-google.svg",
   stack_paper: "assets/social/stack_paper.svg",
   certificate: "assets/social/icons8-diploma-1-96.png",
+  event: "assets/social/event.svg",
 };
 
 /**
@@ -33,6 +34,14 @@ const icons = {
  * If the card is important appears with a red border
  */
 const items = [
+  {
+    type: "single",
+    title: "Imersão no Jornada - Abril",
+    description:
+      "<span>Desenvolva as <b>9 soft-skills</b><br>mais requisitadas no mercado de trabalho</span>",
+    link: "https://shortest.link/imersaonojornada",
+    icon: icons.event,
+  },
   {
     type: "single",
     title: "Processo de entrada FAAC WebTV",
