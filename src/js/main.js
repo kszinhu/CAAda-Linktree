@@ -36,14 +36,6 @@ const icons = {
 const items = [
   {
     type: "single",
-    title: "Imersão no Jornada - Abril",
-    description:
-      "<span>Desenvolva as <b>9 soft-skills</b><br>mais requisitadas no mercado de trabalho</span>",
-    link: "https://shortest.link/imersaonojornada",
-    icon: icons.event,
-  },
-  {
-    type: "single",
     title: "Processo de entrada FAAC WebTV",
     description: "Preencha e faça parte do FAAC WebTV. 🥳",
     link: "https://docs.google.com/forms/d/1OM-4keQZYtfnGn5WN3_wr6lWZ3dGh2Bzmo0YXiYbGL8/viewform?edit_requested=true",
