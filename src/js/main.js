@@ -36,6 +36,13 @@ const icons = {
 const items = [
   {
     type: "single",
+    title: "Machine Learning School for Materials",
+    description: "Venha conhecer a área de Machine Learning para materiais",
+    link: "https://pages.cnpem.br/MLSchool/",
+    icon: icons.event,
+  },
+  {
+    type: "single",
     title: "Processo de entrada FAAC WebTV",
     description: "Preencha e faça parte do FAAC WebTV. 🥳",
     link: "https://docs.google.com/forms/d/1OM-4keQZYtfnGn5WN3_wr6lWZ3dGh2Bzmo0YXiYbGL8/viewform?edit_requested=true",
