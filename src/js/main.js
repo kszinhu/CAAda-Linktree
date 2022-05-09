@@ -36,10 +36,19 @@ const icons = {
 const items = [
   {
     type: "single",
+    title: "<h2>Inscrição para o <b>Curto Circuitos</b></h2>",
+    description: "Inscreva-se para o curto circuitos de 2022",
+    link: "",
+    icon: icons.form,
+    date: StringToDate("21/05/2022"),
+  },
+  {
+    type: "single",
     title: "Machine Learning School for Materials",
     description: "Venha conhecer a área de Machine Learning para materiais",
     link: "https://pages.cnpem.br/MLSchool/",
     icon: icons.event,
+    date: StringToDate("31/07/2022"),
   },
   {
     type: "single",
