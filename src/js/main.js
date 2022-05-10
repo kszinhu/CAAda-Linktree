@@ -38,7 +38,7 @@ const items = [
     type: "single",
     title: "<h2>Inscrição para o <b>Curto Circuitos</b></h2>",
     description: "Inscreva-se para o curto circuitos de 2022",
-    link: "",
+    link: "https://docs.google.com/forms/d/19yr1TYsvdny-oi3b3d1aoXYQmQpCPi7uC-7WRqANADg/edit?usp=sharing",
     icon: icons.form,
     date: StringToDate("21/05/2022"),
   },
