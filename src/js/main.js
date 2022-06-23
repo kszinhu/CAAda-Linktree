@@ -36,11 +36,11 @@ const icons = {
 const items = [
   {
     type: "single",
-    title: "<h2>Inscrição para o <b>Curto Circuitos</b></h2>",
-    description: "Inscreva-se nos eventos do Curto Circuitos",
-    link: "https://shortest.link/curto-circuito-1-2022",
+    title: "Quadrilha Festa Junina - 2022",
+    description: "Inscrição para a Quadrilha na Festa Junina - Contabiliza AC",
+    link: 'https://forms.gle/Z2uk97kwMwGXZ89F7',
     icon: icons.form,
-    date: StringToDate("05/06/2022"),
+    date: StringToDate("25/06/2022"),
   },
   {
     type: "single",
