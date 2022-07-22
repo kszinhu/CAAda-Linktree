@@ -35,6 +35,27 @@ const icons = {
  */
 const items = [
   {
+    type: "multiples",
+    title: "Certificados Curto Circuitos",
+    description: "Faça download dos certificados dos curto circuitos 🥳",
+    link: [
+      {
+        title: "Certificado Participante",
+        description: "Certificados referente aos participantes",
+        icon: icons.certificate,
+        link: 'https://drive.google.com/drive/folders/11jW__7jNkuI6gHHwi6UCcad_DGIPwDSD?usp=sharing',
+      },
+      {
+        title: "Certificado Palestrante",
+        description: "Certificados referente aos palestrantes",
+        icon: icons.certificate,
+        link: 'https://drive.google.com/drive/folders/1PJCgEiM_i7X_Y_G6aGas00G8BkZF_TEs?usp=sharing',
+      }
+    ],
+    icon: icons.certificate,
+    date: StringToDate("06/08/2022"),
+  },
+  {
     type: "single",
     title: "Quadrilha Festa Junina - 2022",
     description: "Inscrição para a Quadrilha na Festa Junina - Contabiliza AC",
@@ -122,7 +143,7 @@ function createItem({ title, description, icon, link, important }) {
   item.id = title.replace(/\s/g, "");
   item.classList.add("hoverable");
   item.target = "_blank";
-  debugger;
+
   important && item.classList.add("important-card");
   link && (item.href = link);
   item.innerHTML = `
