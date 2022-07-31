@@ -35,6 +35,14 @@ const icons = {
  */
 const items = [
   {
+    type: "single",
+    title: "Certificados Além da Sala de Aula",
+    description: "Faça download dos certificados 🎉👌",
+    link: "https://drive.google.com/drive/folders/18NazDGL3ZvhTL-Uc1ATrC-2Tfrzuf7yw?usp=sharing",
+    icon: icons.certificate,
+    date: StringToDate("06/08/2022"),
+  },
+  {
     type: "multiples",
     title: "Certificados Curto Circuitos",
     description: "Faça download dos certificados dos curto circuitos 🥳",
