@@ -35,12 +35,12 @@ const icons = {
  */
 const items = [
   {
-    type: "single",
-    title: "Certificados Além da Sala de Aula",
-    description: "Faça download dos certificados 🎉👌",
-    link: "https://drive.google.com/drive/folders/18NazDGL3ZvhTL-Uc1ATrC-2Tfrzuf7yw?usp=sharing",
+    type: 'single',
+    title: "Certificados de Filiação Temporária",
+    description: "Faça download do seu certificado 👌",
+    link: "https://shortest.link/certificados-festa-junina-afiliacao-2022",
     icon: icons.certificate,
-    date: StringToDate("06/08/2022"),
+    date: StringToDate("01/05/2023"),
   },
   {
     type: "multiples",
