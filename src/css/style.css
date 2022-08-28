@@ -3,6 +3,8 @@
   --scrollbar-thumb-hover: #3a3a3a;
   --scrollbar-thumb-active: #3a3a3a;
   --scrollbar-track: transparent;
+  --tw-color-white: #fff;
+  --tw-color-red: #ff0000;
   background-color: #141414; }
 
 .context {
@@ -32,9 +34,12 @@
   border-radius: 2rem;
   padding: 2rem;
   padding-bottom: 3.5rem;
-  -webkit-transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, -webkit-transform;
-  -webkit-transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  -webkit-transition-property: background-color, border-color, color, fill,
+ stroke, opacity, box-shadow, -webkit-transform;
+  -webkit-transition-property: background-color, border-color, color, fill,
+ stroke, opacity, box-shadow, transform;
+  transition-property: background-color, border-color, color, fill, stroke,
+ opacity, box-shadow, transform;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transition-duration: 400ms;
@@ -136,9 +141,12 @@
         padding-top: 1rem;
         padding-bottom: 1rem;
         border-radius: 0.5rem;
-        -webkit-transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, -webkit-transform;
-        -webkit-transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
-        transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+        -webkit-transition-property: background-color, border-color, color, fill,
+ stroke, opacity, box-shadow, -webkit-transform;
+        -webkit-transition-property: background-color, border-color, color, fill,
+ stroke, opacity, box-shadow, transform;
+        transition-property: background-color, border-color, color, fill, stroke,
+ opacity, box-shadow, transform;
         -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         -webkit-transition-duration: 300ms;
@@ -240,6 +248,10 @@
   --tw-text-opacity: 1 !important;
   --tw-bg-opacity: 1 !important;
   color: rgba(43, 43, 43, var(--tw-text-opacity)); }
+
+.important-card {
+  border-bottom: 2px solid var(--tw-color-white);
+}
 
 @media (min-width: 640px) {
   .context .cardContent .cardLinks a .cardLink_Icon {

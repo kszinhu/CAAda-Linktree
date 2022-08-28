@@ -5,6 +5,7 @@ const icons = {
   form: "assets/social/formularios-do-google.svg",
   stack_paper: "assets/social/stack_paper.svg",
   certificate: "assets/social/icons8-diploma-1-96.png",
+  event: "assets/social/event.svg",
 };
 
 /**
@@ -28,31 +29,68 @@ const icons = {
  *
  * - Date {Date}
  * Until which date the card will be displayed
+ * 
+ * - Important {Boolean}
+ * If the card is important appears with a red border
  */
 const items = [
   {
-    type: "single",
-    title: "O que são atividades complementares?",
-    description: `<span style="margin-left: 1px">
-      Saiba mais sobre o que são atividades complementares, participando da <strong>Mesa Redonda</strong>.
-    </span>`,
-    link: "https://forms.gle/z6e1YZaMFWKrHSC2A",
-    icon: icons.form,
-    date: StringToDate("21/01/2022"),
+    type: 'single',
+    title: "Certificados de Filiação Temporária",
+    description: "Faça download do seu certificado 👌",
+    link: "https://shortest.link/certificados-festa-junina-afiliacao-2022",
+    icon: icons.certificate,
+    date: StringToDate("01/05/2023"),
+  },
+  {
+    type: "multiples",
+    title: "Certificados Curto Circuitos",
+    description: "Faça download dos certificados dos curto circuitos 🥳",
+    link: [
+      {
+        title: "Certificado Participante",
+        description: "Certificados referente aos participantes",
+        icon: icons.certificate,
+        link: 'https://drive.google.com/drive/folders/11jW__7jNkuI6gHHwi6UCcad_DGIPwDSD?usp=sharing',
+      },
+      {
+        title: "Certificado Palestrante",
+        description: "Certificados referente aos palestrantes",
+        icon: icons.certificate,
+        link: 'https://drive.google.com/drive/folders/1PJCgEiM_i7X_Y_G6aGas00G8BkZF_TEs?usp=sharing',
+      }
+    ],
+    icon: icons.certificate,
+    date: StringToDate("06/08/2022"),
   },
   {
     type: "single",
-    title: "Representante no Conselho do Departamento",
-    description: "Participe e faça parte do Conselho do Departamento!😊",
-    link: "https://forms.gle/6Lw4hzMNXV4fKcb87",
+    title: "Quadrilha Festa Junina - 2022",
+    description: "Inscrição para a Quadrilha na Festa Junina - Contabiliza AC",
+    link: 'https://forms.gle/Z2uk97kwMwGXZ89F7',
     icon: icons.form,
-    date: StringToDate("01/02/2022"),
+    date: StringToDate("25/06/2022"),
+  },
+  {
+    type: "single",
+    title: "Machine Learning School for Materials",
+    description: "Venha conhecer a área de Machine Learning para materiais",
+    link: "https://pages.cnpem.br/MLSchool/",
+    icon: icons.event,
+    date: StringToDate("31/07/2022"),
+  },
+  {
+    type: "single",
+    title: "Processo de entrada FAAC WebTV",
+    description: "Preencha e faça parte do FAAC WebTV. 🥳",
+    link: "https://docs.google.com/forms/d/1OM-4keQZYtfnGn5WN3_wr6lWZ3dGh2Bzmo0YXiYbGL8/viewform?edit_requested=true",
+    icon: icons.form,
   },
   {
     type: "single",
     title: "Carta Programa",
-    description: '<span>Veja a Carta da Chapa <i>"Frances Allen"</i> 😀</span>',
-    link: "https://drive.google.com/file/d/1tVL8LVXsfOQjZrYiolIgb18gNR5tJ3Q5/view?usp=sharing",
+    description: '<span>Veja a Carta da Chapa <i>"Larry Tesler"</i> 😀</span>',
+    link: "https://shortest.link/CartaPrograma-LarryTesler",
     icon: icons.paper,
   },
 ];
@@ -108,11 +146,13 @@ function isHTML(str) {
  * @param {Object} Data
  * @returns {Node} The card
  */
-function createItem({ title, description, icon, link }) {
+function createItem({ title, description, icon, link, important }) {
   const item = document.createElement("a");
   item.id = title.replace(/\s/g, "");
   item.classList.add("hoverable");
   item.target = "_blank";
+
+  important && item.classList.add("important-card");
   link && (item.href = link);
   item.innerHTML = `
     <div class="cardLink_Icon">
@@ -131,13 +171,13 @@ function createItem({ title, description, icon, link }) {
 const renderItems = () => {
   const local = document.getElementById("card-links-unfixed");
 
-  items.forEach(({ type, title, description, link, icon, date }, index) => {
+  items.forEach(({ type, title, description, link, icon, date, important }, index) => {
     if (date && isAfter(date)) return;
 
     const handleItem = {
-      single: () => createItem({ title, description, icon, link }),
+      single: () => createItem({ title, description, icon, link, important }),
       multiples: () => {
-        const item = createItem({ title, description, icon });
+        const item = createItem({ title, description, icon, important });
         item.onclick = () => createList(item, getItems(index));
         return item;
       },

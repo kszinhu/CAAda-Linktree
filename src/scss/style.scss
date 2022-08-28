@@ -3,7 +3,9 @@
   --scrollbar-thumb-hover: #3a3a3a;
   --scrollbar-thumb-active: #3a3a3a;
   --scrollbar-track: transparent;
-
+  --tw-color-white: #fff;
+  --tw-color-red: #ff0000;
+  
   background-color: rgba(20, 20, 20, 1);
 }
 
@@ -306,6 +308,11 @@
     --tw-bg-opacity: 1 !important;
     color: rgba(43, 43, 43, var(--tw-text-opacity));
   }
+}
+
+// Card important
+.important-card {
+  border-bottom: 2px solid var(--tw-color-white);
 }
 
 // Media Queries
