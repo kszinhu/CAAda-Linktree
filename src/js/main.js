@@ -6,6 +6,7 @@ const icons = {
   stack_paper: "assets/social/stack_paper.svg",
   certificate: "assets/social/icons8-diploma-1-96.png",
   event: "assets/social/event.svg",
+  heart: "assets/social/icons8-heart-96.png",
 };
 
 /**
@@ -184,4 +185,49 @@ const renderItems = () => {
     };
     local.appendChild(handleItem[type]());
   });
+};
+
+const changeEntity = ({ name, type }) => {
+  document.getElementById("entity-name").innerHTML = name;
+  document.getElementById("entity-class").innerHTML = type;
+}
+
+/**
+ * Render a card with x and y position toggling a each hover on button
+ */
+const renderIsadoraCard = () => {
+  const local = document.getElementById("birthdate-isadora");
+
+  local.style = "position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;";
+  local.onclick = () => {
+    // Added a new card with two buttons accept and reject with a text and a image
+    local.innerHTML = `
+      <div class="cardLink_Icon">
+        <img src="/assets/img/isadora-with-me.png" alt="Isadora" />
+      </div>
+      <div class='cardLink_Text'>
+        <h2>Isadora</h2>
+        <p>Você gostaria de casar comigo?</p>
+        <div class="buttons">
+          <button id="accept-button-commemorative"  class="accept">Aceito</button>
+          <button id="reject-button-commemorative" class="reject">Recuso</button>
+        </div>
+      </div>
+    `;
+
+    // Added a new button to reject the proposal
+    const rejectButton = document.getElementById("reject-button-commemorative");
+    rejectButton.onmouseover = () => {
+      // change a local position randomly
+      local.style = `position: absolute; top: ${Math.random() * 100}%; left: ${Math.random() * 100}%; transform: translate(-50%, -50%); z-index: 2;`;
+    };
+
+    // Added a new button to accept the proposal
+    const acceptButton = document.getElementById("accept-button-commemorative");
+    acceptButton.onclick = () => {
+      // open a new tab with a maps
+      window.open("https://www.google.com.br/maps/place/N%C3%A3o+me+importo+quanto+aonde+vamos+estar+se+estaremos+juntos,+mas+farei+de+tudo+por+voc%C3%AA.+Te+amo+muito.+Com+amor+Cassiano/@1.1523615,73.2391621,7.63z/data=!4m8!3m7!1s0x3b4a7510768e3ca5:0xfc332882e5472b6d!5m2!4m1!1i2!8m2!3d0.847621!4d73.4071712", "_blank");
+    };
+
+  }
 };

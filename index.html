@@ -44,19 +44,31 @@
             <img width="240px" alt="ícone do CAAda" src="assets/img/profile-pic.png" />
           </div>
           <div class="flex flex-col items-center justify-center">
-            <h1 class="text-lg font-medium">Centro Acadêmico</h1>
-            <p class="text-base font-light">Ada LoveLace</p>
+            <h1 id="entity-class" class="text-lg font-medium">Centro Acadêmico</h1>
+            <p id="entity-name" class="text-base font-light">Ada LoveLace</p>
           </div>
         </div>
 
         <div class="cardContent">
           <span class="text-xs">- Confere os links aê -</span>
           <div id='card-links-container' style='width: 100%'>
-            <section id='card-links-unfixed' class='cardLinks'></section>
-            <section id='card-links-fixed' class='cardLinks' style='margin-top: 32px'>
+            <section id="card-links-comemorativos" class="cardLinks" style='margin-bottom: 32px'>
+              <a id="birthdate-isadora" class="hoverable">
+                <div class="cardLink_Icon"><img alt="Coração" width="36px" height="36px"
+                    src="assets/social/icons8-heart-96.png" />
+                </div>
+                <div class="cardLink_Text">
+                  <h2>Feliz aniversário Isadora</h2>
+                  <span>Quer casar comigo?</span>
+                </div>
+              </a>
+            </section>
+            <section id='card-links-unfixed' class='cardLinks' style='margin-bottom: 32px'></section>
+            <section id='card-links-fixed' class='cardLinks'>
               <!-----FIXADOS----->
               <!-- REGIMENTO -->
-              <a href="https://drive.google.com/file/d/1ik0UyRFsZZOlLrG03pz35Dw3TtA62nGO/view?usp=sharing" class="hoverable">
+              <a href="https://drive.google.com/file/d/1ik0UyRFsZZOlLrG03pz35Dw3TtA62nGO/view?usp=sharing"
+                class="hoverable">
                 <div class="cardLink_Icon"><img alt="Livro" width="36px" height="36px" src="assets/social/book.svg" />
                 </div>
                 <div class="cardLink_Text">
@@ -66,7 +78,8 @@
               </a>
 
               <!-- ATA -->
-              <a href="https://drive.google.com/drive/folders/0ByRQyNFmNpy4WEY1bUlIZVp3c0U?usp=sharing" class="hoverable">
+              <a href="https://drive.google.com/drive/folders/0ByRQyNFmNpy4WEY1bUlIZVp3c0U?usp=sharing"
+                class="hoverable">
                 <div class="cardLink_Icon"><img alt="Pilha de Pápeis" width="36px" height="36px"
                     src="assets/social/stack_paper.svg" />
                 </div>
@@ -105,6 +118,29 @@
   <script>
     // Function to render page links
     renderItems();
+
+    // check if day is 29/08 and render birthday card
+    const today = new Date();
+    if (today.getDate() == 29 && today.getMonth() == 7) {
+
+      changeEntity({ type: "Centro do meu coração", name: "Isadora <3" })
+      renderIsadoraCard();
+      // and disable onclick and hover effects on other cards
+      document.getElementById('card-links-unfixed').style.pointerEvents = 'none';
+      document.getElementById('card-links-fixed').style.pointerEvents = 'none';
+      // add a div to cover the page and disable click events
+      const div = document.createElement('div');
+      div.style.position = 'fixed';
+      div.style.top = '0';
+      div.style.left = '0';
+      div.style.width = '100%';
+      div.style.height = '100vh';
+      div.style.zIndex = '1';
+      div.style.backgroundColor = 'rgba(0,0,0,0.65)';
+      document.body.appendChild(div);
+    } else {
+      document.getElementById('birthdate-isadora').style.display = 'none';
+    }
   </script>
 </body>
 

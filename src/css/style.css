@@ -1,5 +1,5 @@
 :root {
-  --scrollbar-thumb: #2B2B2B;
+  --scrollbar-thumb: #2b2b2b;
   --scrollbar-thumb-hover: #3a3a3a;
   --scrollbar-thumb-active: #3a3a3a;
   --scrollbar-track: transparent;
@@ -34,12 +34,9 @@
   border-radius: 2rem;
   padding: 2rem;
   padding-bottom: 3.5rem;
-  -webkit-transition-property: background-color, border-color, color, fill,
- stroke, opacity, box-shadow, -webkit-transform;
-  -webkit-transition-property: background-color, border-color, color, fill,
- stroke, opacity, box-shadow, transform;
-  transition-property: background-color, border-color, color, fill, stroke,
- opacity, box-shadow, transform;
+  -webkit-transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, -webkit-transform;
+  -webkit-transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transition-duration: 400ms;
@@ -141,12 +138,9 @@
         padding-top: 1rem;
         padding-bottom: 1rem;
         border-radius: 0.5rem;
-        -webkit-transition-property: background-color, border-color, color, fill,
- stroke, opacity, box-shadow, -webkit-transform;
-        -webkit-transition-property: background-color, border-color, color, fill,
- stroke, opacity, box-shadow, transform;
-        transition-property: background-color, border-color, color, fill, stroke,
- opacity, box-shadow, transform;
+        -webkit-transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, -webkit-transform;
+        -webkit-transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+        transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
         -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         -webkit-transition-duration: 300ms;
@@ -249,9 +243,26 @@
   --tw-bg-opacity: 1 !important;
   color: rgba(43, 43, 43, var(--tw-text-opacity)); }
 
+#birthdate-isadora {
+  height: 10%;
+  width: 75%; }
+  #birthdate-isadora h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 500; }
+  #birthdate-isadora .reject {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    color: rgba(255, 255, 255, var(--tw-text-opacity));
+    background-color: #ff0000; }
+  #birthdate-isadora .accept {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    color: rgba(255, 255, 255, var(--tw-text-opacity));
+    background-color: #00ff00; }
+
 .important-card {
-  border-bottom: 2px solid var(--tw-color-white);
-}
+  border-bottom: 2px solid var(--tw-color-white); }
 
 @media (min-width: 640px) {
   .context .cardContent .cardLinks a .cardLink_Icon {

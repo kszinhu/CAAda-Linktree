@@ -1,11 +1,11 @@
 :root {
-  --scrollbar-thumb: #2B2B2B;
+  --scrollbar-thumb: #2b2b2b;
   --scrollbar-thumb-hover: #3a3a3a;
   --scrollbar-thumb-active: #3a3a3a;
   --scrollbar-track: transparent;
   --tw-color-white: #fff;
   --tw-color-red: #ff0000;
-  
+
   background-color: rgba(20, 20, 20, 1);
 }
 
@@ -307,6 +307,33 @@
     --tw-text-opacity: 1 !important;
     --tw-bg-opacity: 1 !important;
     color: rgba(43, 43, 43, var(--tw-text-opacity));
+  }
+}
+
+#birthdate-isadora {
+  height: 10%;
+  width: 75%;
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 500;
+  }
+
+  .reject {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+
+    color: rgba(255, 255, 255, var(--tw-text-opacity));
+    background-color: #ff0000;
+  }
+
+  .accept {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+
+    color: rgba(255, 255, 255, var(--tw-text-opacity));
+    background-color: #00ff00;
   }
 }
 
